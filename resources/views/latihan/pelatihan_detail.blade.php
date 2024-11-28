@@ -29,9 +29,13 @@
         <h2>Peserta yang sudah terdaftar</h2>
         <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
         <ul class="icon-list">
-          <li>User 1</li>
-          <li>User 2</li>
-          <li>User 3</li> 
+          @if(!$course->users->isEmpty())
+          @foreach($course->users as $user)
+          <li>{{ $user->name }}</li>
+          @endforeach 
+          @else
+          <li>Belum ada yang mengikuti pelatihan</li> 
+          @endif 
         </ul>
       </div>
     </div>
