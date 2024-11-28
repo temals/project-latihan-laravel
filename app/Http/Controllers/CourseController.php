@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -13,6 +14,13 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::active()->get(); 
+        return view('latihan.pelatihan',
+        ["courses" => $courses]);
+    }
+
+    public function myCourse(Request $request)
+    {
+        $courses = Auth::user()->courses;  
         return view('latihan.pelatihan',
         ["courses" => $courses]);
     }

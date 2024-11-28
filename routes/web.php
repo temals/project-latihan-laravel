@@ -58,6 +58,7 @@ Route::get('/admin', function() {
 
 Route::resource('photos',PhotoController::class)->middleware('auth');
 
+Route::get('/course/me', [CourseController::class,'myCourse'])->name('course.me');
 Route::resource('course',CourseController::class);
 
 

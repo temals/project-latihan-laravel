@@ -15,7 +15,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pelatihan-saya">
+            <a class="nav-link" href="{{ route('course.me') }}">
               <span data-feather="shopping-cart"></span>
               Pelatihan Saya
             </a>
