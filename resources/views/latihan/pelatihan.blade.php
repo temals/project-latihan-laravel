@@ -26,7 +26,7 @@
         <td>-</td>
         <td>{{$course->days}} Hari</td>
         <td>{{$course->start}}</td>
-        <td><a href="/pelatihan/detail" class="btn btn-primary">Detail</a></td>
+        <td><a href={{ "/course/" . $course->id}} class="btn btn-primary">Detail</a></td>
     </tr>
     @endforeach
     @endif

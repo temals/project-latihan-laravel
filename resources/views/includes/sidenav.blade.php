@@ -9,7 +9,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pelatihan">
+            <a class="nav-link" href="/course">
               <span data-feather="file"></span>
               Pelatihan
             </a>

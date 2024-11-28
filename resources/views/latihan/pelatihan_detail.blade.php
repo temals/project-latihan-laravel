@@ -1,12 +1,12 @@
 @extends('layouts.appbs')
 
 @section('content-title')
-<div><h1>Get started with Bootstrap</h1></div>
+<div><h1>{{ $course->name }}</h1></div>
 @endsection
 
 @section('content')
     
-    <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.</p>
+    <p class="fs-5 col-md-8">{{ $course->description }}</p>
 
     <div class="mb-5">
       <a href="#" class="btn btn-primary btn-lg px-4">Ikuti Pelatihan</a>

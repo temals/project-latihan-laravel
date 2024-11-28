@@ -12,7 +12,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::active()->get(); 
+        $courses = Course::all(); 
         return view('latihan.pelatihan',
         ["courses" => $courses]);
     }
@@ -38,7 +38,8 @@ class CourseController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $course = Course::findOrFail($id);
+        return view('latihan.pelatihan_detail', ["course" => $course]);
     }
 
     /**
