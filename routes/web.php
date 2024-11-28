@@ -59,6 +59,8 @@ Route::get('/admin', function() {
 Route::resource('photos',PhotoController::class)->middleware('auth');
 
 Route::get('/course/me', [CourseController::class,'myCourse'])->name('course.me');
+Route::get('/course/{id}/join', [CourseController::class,'join'])->name('course.join');
+Route::get('/course/{id}/quit', [CourseController::class,'quit'])->name('course.quit');
 Route::resource('course',CourseController::class);
 
 

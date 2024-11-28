@@ -49,6 +49,22 @@ class CourseController extends Controller
         $course = Course::findOrFail($id);
         return view('latihan.pelatihan_detail', ["course" => $course]);
     }
+    public function join(string $id)
+    {
+        $course = Course::findOrFail($id);
+        $course->users()->sync(Auth::user()->id);
+
+        return redirect('/course/'.$id)
+            ->with('success', 'Berhasil join pelatihan');
+    }
+    public function quit(string $id)
+    {
+        $course = Course::findOrFail($id);
+        $course->users()->detach(Auth::user()->id);
+
+        return redirect('/course/'.$id)
+            ->with('success', 'Berhasil join pelatihan');
+    }
 
     /**
      * Show the form for editing the specified resource.

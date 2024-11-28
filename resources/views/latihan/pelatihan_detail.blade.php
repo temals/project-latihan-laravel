@@ -8,8 +8,8 @@
     
     <p class="fs-5 col-md-8">{{ $course->description }}</p>
 
-    <div class="mb-5">
-      <a href="#" class="btn btn-primary btn-lg px-4">Ikuti Pelatihan</a>
+    <div class="mb-5"> 
+      <a href="{{ route('course.join', ['id' => $course->id]) }}" class="btn btn-primary btn-lg px-4">Ikuti Pelatihan</a>
     </div>
 
     <hr class="col-3 col-md-2 mb-5">
