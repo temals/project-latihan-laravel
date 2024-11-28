@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\EnsureTokenIsValid;
@@ -56,6 +57,8 @@ Route::get('/admin', function() {
 })->middleware([ EnsureUserHasRole::class.':admin']);
 
 Route::resource('photos',PhotoController::class)->middleware('auth');
+
+Route::resource('course',CourseController::class);
 
 
 
